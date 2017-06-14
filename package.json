@@ -1,0 +1,20 @@
+{
+  "name": "hello-ses",
+  "version": "1.0.0",
+  "description": "hello world for amazon ses email sending",
+  "main": "server.js",
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "jaketrent",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.69.0",
+    "dotenv": "^4.0.0"
+  }
+}
