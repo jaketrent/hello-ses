@@ -2,9 +2,9 @@ require('dotenv').config()
 
 const AWS = require('aws-sdk')
 
-var ses = new AWS.SES()
+const ses = new AWS.SES()
 
-var params = {
+const params = {
   Destination: {
     ToAddresses: [process.env.TO_EMAIL]
   },
@@ -28,13 +28,8 @@ var params = {
   ReturnPath: process.env.FROM_EMAIL,
   Source: process.env.FROM_EMAIL
 }
-ses.sendEmail(params, function(err, data) {
-  if (err)
-    console.log(err, err.stack) // an error occurred
-  else console.log(data) // successful response
-  /*
-     data = {
-     MessageId: "EXAMPLE78603177f-7a5433e7-8edb-42ae-af10-f0181f34d6ee-000000"
-     }
-   */
+
+ses.sendEmail(params, (err, data) => {
+  if (err) console.log(err, err.stack)
+  else console.log(data)
 })

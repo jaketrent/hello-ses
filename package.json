@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
+  "keywords": ["aws-sdk", "ses", "nodejs"],
   "author": "jaketrent",
   "license": "MIT",
   "dependencies": {
